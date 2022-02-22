@@ -7,7 +7,7 @@ jobs:
   test:
     name: test
     runs-on: ubuntu-latest
-    if: "github.ref != 'refs/heads/main' && github.ref != 'refs/heads/main-1'"
+    if: "github.ref != 'refs/heads/main-2' && 'refs/heads/main'"
 
     permissions:
       contents: read
@@ -16,4 +16,3 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
       - run: echo "foobar"
-
