@@ -1,0 +1,21 @@
+name: defaullt
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - run: echo "foobar"
+
