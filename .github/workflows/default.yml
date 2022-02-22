@@ -7,7 +7,7 @@ jobs:
   test:
     name: test
     runs-on: ubuntu-latest
-    if: "github.ref != 'refs/heads/main-2' && 'refs/heads/main'"
+    if: "github.ref != 'refs/heads/main-2' && github.ref != 'refs/heads/main'"
 
     permissions:
       contents: read
