@@ -1,15 +1,13 @@
 name: defaullt
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  push: {}
 
 jobs:
   test:
     name: test
     runs-on: ubuntu-latest
+    if: "github.ref != 'refs/heads/main' && github.ref != 'refs/heads/main-1'"
 
     permissions:
       contents: read
