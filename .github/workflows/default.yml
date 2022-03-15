@@ -10,10 +10,6 @@ jobs:
     # if: "github.ref != 'refs/heads/main-2' && github.ref != 'refs/heads/main'"
     strategy:
       fail-fast: true
-      matrix:
-        node: [13, 14]
-        os: [macos-latest, ubuntu-18.04]
-        experimental: [false]
     permissions:
       contents: read
     steps:
@@ -26,10 +22,6 @@ jobs:
     # if: "github.ref != 'refs/heads/main-2' && github.ref != 'refs/heads/main'"
     strategy:
       fail-fast: true
-      matrix:
-        node: [13, 14]
-        os: [macos-latest, ubuntu-18.04]
-        experimental: [false]
     permissions:
       contents: read
     steps:
