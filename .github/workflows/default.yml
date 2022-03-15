@@ -11,8 +11,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        test:
-          - 'test'
+        node: [13, 14]
+        os: [macos-latest, ubuntu-18.04]
+        experimental: [false]
     permissions:
       contents: read
     steps:
@@ -26,8 +27,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        test:
-          - 'test'
+        node: [13, 14]
+        os: [macos-latest, ubuntu-18.04]
+        experimental: [false]
     permissions:
       contents: read
     steps:
