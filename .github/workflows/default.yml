@@ -17,4 +17,4 @@ jobs:
         with:
           envkey_TEST: ${{ secrets.TEST }}
       - name: Show test var
-        run: echo $TEST
+        run: source .env && echo $TEST
