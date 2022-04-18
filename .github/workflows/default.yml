@@ -16,5 +16,5 @@ jobs:
         uses: SpicyPizza/create-envfile@v1
         with:
           envkey_TEST: ${{ secrets.TEST }}
-      - name: Show env vars
-        run: set
+      - name: Show test var
+        run: echo $TEST
