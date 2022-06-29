@@ -1,0 +1,7 @@
+services:
+  web:
+    image: alpine
+    command: "/bin/sh -c 'sleep infinite'"
+  front:
+    image: alpine
+    command: "/bin/sh -c 'sleep infinite'"

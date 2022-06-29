@@ -1,0 +1,8 @@
+required_approvals = 0
+up_to_date_approvals = false
+timeout_sec = 21600
+use_squash_merge = true
+cut_body_after = "<!-- more -->"
+status = [
+    "test-2"
+]

@@ -1,7 +1,8 @@
 name: defaullt
 
 on:
-  push: {}
+  push:
+    branches: [staging-bors, trying-bors]
 
 jobs:
   test-2:
