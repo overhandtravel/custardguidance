@@ -2,7 +2,7 @@ name: defaullt
 
 on:
   push:
-    branches: [main, staging-bors, trying-bors]
+    branches: [main, staging, production, staging-bors, trying-bors]
   pull_request:
     branches: [main, staging, production]
 
