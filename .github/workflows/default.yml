@@ -2,9 +2,9 @@ name: defaullt
 
 on:
   push:
-    branches: [master, staging-bors, trying-bors]
+    branches: [main, staging-bors, trying-bors]
   pull_request:
-    branches: [master, staging, production]
+    branches: [main, staging, production]
 
 jobs:
   test-2:
