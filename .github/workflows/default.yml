@@ -1,7 +1,10 @@
 name: defaullt
 
 on:
-  push: {}
+  push:
+    branches: [master, staging-bors, trying-bors]
+  pull_request:
+    branches: [master, staging, production]
 
 jobs:
   test-2:
