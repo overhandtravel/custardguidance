@@ -2,7 +2,7 @@ name: defaullt
 
 on:
   push:
-    branches: [staging-bors, trying-bors]
+    branches: '*'
 
 jobs:
   test-2:
@@ -17,5 +17,9 @@ jobs:
         uses: SpicyPizza/create-envfile@v1
         with:
           envkey_TEST: ${{ secrets.TEST }}
+      - name: Show test var
+        run: |
+          grep -v _REGION $GITHUB_ENV > $GITHUB_ENV.tmp
+          cat $GITHUB_ENV.tmp > $GITHUB_ENV
       - name: Show test var
         run: source .env && echo $TEST
