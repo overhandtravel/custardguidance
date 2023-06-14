@@ -13,13 +13,12 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Create env file
-        uses: SpicyPizza/create-envfile@v1
-        with:
-          envkey_TEST: ${{ secrets.TEST }}
       - name: Show test var
         run: |
-          grep -v _REGION $GITHUB_ENV > $GITHUB_ENV.tmp
-          cat $GITHUB_ENV.tmp > $GITHUB_ENV
-      - name: Show test var
-        run: source .env && echo $TEST
+          echo "TEST_HOME=/home/elastio" >> $GITHUB_ENV
+          echo "TEST_HOME_123=/home/elastio" >> $GITHUB_ENV
+          echo "REG=/home/elastio" >> $GITHUB_ENV
+          ls -lah $GITHUB_ENV
+          grep -v REG $GITHUB_ENV > /tmp/env
+          cat /tmp/env > $GITHUB_ENV
+          cat $GITHUB_ENV
