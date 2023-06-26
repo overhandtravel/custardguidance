@@ -5,3 +5,6 @@ services:
   front:
     image: alpine
     command: "/bin/sh -c 'sleep infinite'"
+  front1:
+    image: alpine
+    command: "/bin/sh -c 'sleep infinite'"
