@@ -1,8 +1,9 @@
 name: pr
 
 on:
-  pull_requests:
-  merge_group:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test-2:
@@ -15,6 +16,7 @@ jobs:
     steps:
       - name: Show test var
         run: |
+          sleep 300
           echo "TEST_HOME=/home/elastio" >> $GITHUB_ENV
           echo "TEST_HOME_123=/home/elastio" >> $GITHUB_ENV
           echo "REG=/home/elastio" >> $GITHUB_ENV
